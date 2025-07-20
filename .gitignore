@@ -8,7 +8,6 @@ venv/
 *.sqlite3
 
 # Poetry
-poetry.lock
 
 # VSCode
 .vscode/
