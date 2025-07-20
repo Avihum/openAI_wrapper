@@ -1,7 +1,9 @@
-from fastapi import FastAPI, HTTPException
+import httpx
+
 from pydantic import BaseModel
 from config import OPENAI_API_KEY
-import httpx
+
+from fastapi import FastAPI, HTTPException
 from fastapi import Request, Form
 from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse
