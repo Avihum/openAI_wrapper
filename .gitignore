@@ -1,0 +1,14 @@
+# Python
+__pycache__/
+*.py[cod]
+*.env
+.venv/
+env/
+venv/
+*.sqlite3
+
+# Poetry
+poetry.lock
+
+# VSCode
+.vscode/
