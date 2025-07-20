@@ -1,19 +1,78 @@
-<!-- templates/chat.html -->
 <!DOCTYPE html>
 <html>
 <head>
     <title>AI Chat</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        textarea {
+            background-color: #1e1e1e;
+            color: #f0f0f0;
+            border: 1px solid #444;
+            padding: 10px;
+            border-radius: 6px;
+            resize: vertical;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #03dac6;
+            border: none;
+            color: #000;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #018786;
+        }
+
+        .response {
+            margin-top: 30px;
+            background-color: #1e1e1e;
+            padding: 15px;
+            border-radius: 6px;
+            width: 90%;
+            max-width: 600px;
+            border: 1px solid #333;
+        }
+    </style>
 </head>
 <body>
     <h1>Talk to GPT</h1>
+
     <form method="post">
-        <textarea name="message" rows="4" cols="50">{{ message or '' }}</textarea><br>
+        <textarea name="message" rows="4" required>{{ message or '' }}</textarea>
         <button type="submit">Send</button>
     </form>
 
     {% if reply %}
-        <h3>Response:</h3>
-        <p>{{ reply }}</p>
+        <div class="response">
+            <strong>Response:</strong>
+            <p>{{ reply }}</p>
+        </div>
     {% endif %}
 </body>
 </html>
