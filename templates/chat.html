@@ -1,0 +1,19 @@
+<!-- templates/chat.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Chat</title>
+</head>
+<body>
+    <h1>Talk to GPT</h1>
+    <form method="post">
+        <textarea name="message" rows="4" cols="50">{{ message or '' }}</textarea><br>
+        <button type="submit">Send</button>
+    </form>
+
+    {% if reply %}
+        <h3>Response:</h3>
+        <p>{{ reply }}</p>
+    {% endif %}
+</body>
+</html>
